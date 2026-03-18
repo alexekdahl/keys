@@ -23,7 +23,7 @@
                 &kp TAB    &kp Q          &kp W          &kp E          &kp R          &kp T        &mt LGUI Y   &mt LCTRL U &mt LALT I  &kp O       &kp P          &kp LS(COMMA)
                 &kp ESC    &kp A          &mt LGUI S     &mt LCTRL D    &mt LALT F     &lt 3 G       &kp H        &kp J        &kp K        &kp L       &kp NUHS       &kp LS(N7)
                 &kp LSHIFT &kp Z          &kp X          &kp C          &kp V          &lt 1 B       &lt 1 N       &kp M        &kp COMMA    &kp DOT     &kp FSLH       &mo 2
-                                        &mo 2          &mo 1          &kp SPACE      &mt LSHIFT ENTER &kp BSPC  &mo 1
+                                        &mo 2          &kp SPACE           &mo 1     &kp BSPC  &mt LSHIFT ENTER &kp BSPC
             >;
         };
 
@@ -50,9 +50,9 @@
         mouse_layer {
             display-name = "Nav";
             bindings = <
-                &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp LA(N1) &kp LA(N2) &kp LA(N3) &kp LA(N4) &trans               &trans
+                &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp LA(N1) &kp LA(N2) &kp LA(N3) &kp LA(N4) &trans               &studio_unlock
                 &trans     &trans       &trans       &trans       &trans       &trans       &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp LC(LS(LA(A)))   &trans
-                &trans     &studio_unlock &trans     &trans       &trans       &trans       &kp LC(N1) &kp LC(N2) &kp LC(N3) &kp LC(N4) &trans               &trans
+                &trans   &trans   &trans     &trans       &trans       &trans       &kp LC(N1) &kp LC(N2) &kp LC(N3) &kp LC(N4) &trans               &trans
                               &trans     &trans       &trans       &trans      &trans     &trans
             >;
         };
@@ -60,9 +60,9 @@
 };
 
 &mt {
-    tapping-term-ms = <175>;
+    tapping-term-ms = <200>;
 };
 
 &lt {
-    tapping-term-ms = <175>;
+    tapping-term-ms = <200>;
 };
