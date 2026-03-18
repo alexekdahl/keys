@@ -6,15 +6,6 @@
 / {
     chosen { zmk,physical-layout = &gggw_crosses_42_layout; };
 
-    behaviors {
-        td_nubs: tap_dance_non_us_backslash {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp NUBS>, <&kp LS(NUBS)>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
         default_layer {
@@ -23,7 +14,7 @@
                 &kp TAB    &kp Q          &kp W          &kp E          &kp R          &kp T        &mt LGUI Y   &mt LCTRL U &mt LALT I  &kp O       &kp P          &kp LS(COMMA)
                 &kp ESC    &kp A          &mt LGUI S     &mt LCTRL D    &mt LALT F     &lt 3 G       &kp H        &kp J        &kp K        &kp L       &kp NUHS       &kp LS(N7)
                 &kp LSHIFT &kp Z          &kp X          &kp C          &kp V          &lt 1 B       &lt 1 N       &kp M        &kp COMMA    &kp DOT     &kp FSLH       &mo 2
-                                        &mo 2           &mo 1           &kp SPACE    &mt LSHIFT ENTER &kp BSPC  &mo 1
+                                        &mo 1           &kp SPACE       &mo 2    &mt LSHIFT ENTER &kp BSPC  &mo 1
             >;
         };
 
@@ -32,7 +23,7 @@
             bindings = <
                 &kp RA(N7) &kp LS(N2)   &kp LS(MINUS) &kp LS(N8)   &kp LS(N9)   &kp RA(RBKT)   &kp N7   &kp N8   &kp N9 &kp LS(EQUAL) &trans &kp LBKT
                 &kp RA(N2) &kp RA(N4)   &kp LS(DOT)   &kp RS(RA(N8)) &kp RS(RA(N9)) &kp LS(FSLH) &kp N4   &kp N5   &kp N6 &kp MINUS     &kp SEMI &kp SQT
-                &td_nubs   &kp LS(N6)   &kp LS(N5)    &kp RA(N8)   &kp RA(N9)   &kp LS(N0)     &kp N1   &kp N2   &kp N3 &kp LS(N1)     &kp RS(RA(N7)) &kp LS(NUBS)
+                &kp NUBS   &kp LS(N6)   &kp LS(N5)    &kp RA(N8)   &kp RA(N9)   &kp LS(N0)     &kp N1   &kp N2   &kp N3 &kp LS(N1)     &kp RS(RA(N7)) &kp LS(NUBS)
                                             &trans      &trans       &trans         &kp LG(SPACE)  &kp N0    &trans
             >;
         };
@@ -60,9 +51,9 @@
 };
 
 &mt {
-    tapping-term-ms = <180>;
+    tapping-term-ms = <175>;
 };
 
 &lt {
-    tapping-term-ms = <180>;
+    tapping-term-ms = <175>;
 };
